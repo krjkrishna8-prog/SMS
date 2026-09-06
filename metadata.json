@@ -1,0 +1,7 @@
+{
+  "name": "NEB Result Management System",
+  "description": "Comprehensive school and college online result management and verification portal following the National Examinations Board (NEB) Nepal grading pattern.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

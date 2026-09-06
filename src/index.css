@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom styles for official NEB-style certificates and marksheets */
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+/* Watermark styles */
+.neb-watermark {
+  background-image: radial-gradient(circle at center, rgba(30, 58, 138, 0.04) 0%, transparent 70%);
+}
+
+/* Security guilloche ornamental border pattern */
+.neb-border-ornament {
+  border: 4px double #1e3a8a;
+  outline: 1px solid #93c5fd;
+  outline-offset: -8px;
+}
+
+/* Dedicated print styling for A4 Grade-Sheets and Master Broadsheets */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .no-print,
+  nav,
+  button,
+  header,
+  footer,
+  .quick-demo-box,
+  .admin-controls {
+    display: none !important;
+  }
+
+  .printable-marksheet {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+    border: 3px double #000000 !important;
+    outline: none !important;
+    page-break-inside: avoid;
+    margin: 0 auto !important;
+    padding: 24px !important;
+  }
+
+  .printable-marksheet * {
+    color: #000000 !important;
+    border-color: #333333 !important;
+  }
+
+  .printable-ledger {
+    display: block !important;
+    width: 100% !important;
+    font-size: 9pt !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+}
